@@ -74,7 +74,7 @@ router.get("/", async (req, res) => {
   const catName = req.query.cat;
   try {
     let posts;
-    if (username) {
+    if (username) { //localhost:5005/api/post?user=elif
       posts = await Post.find({ username: username });
     } else if (catName) {
       posts = await Post.find({
