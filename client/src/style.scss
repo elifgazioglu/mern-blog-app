@@ -112,7 +112,8 @@ body {
                         border: 1px solid white;
 
                         &:hover {
-                            color: rgb(255, 158, 174);
+                            color: white;
+                            background-color: $pink;
                         }
                     }
                 }
@@ -241,7 +242,7 @@ body {
                     }
                 }
 
-                .edit{
+                .edit {
                     display: flex;
                     justify-content: space-between;
                     gap: 5px;
@@ -257,16 +258,16 @@ body {
                         justify-content: center;
                     }
 
-                    .icon{
+                    .icon {
                         width: 15px;
                         height: 15px;
                     }
 
-                    h1{
+                    h1 {
                         font-size: 42px;
                     }
 
-                    p{
+                    p {
                         text-align: justify;
 
                         line-height: 40px;
@@ -281,21 +282,21 @@ body {
                 flex-direction: column;
                 gap: 25px;
 
-                h1{
+                h1 {
                     font-size: 20px;
                 }
 
-                .post{
+                .post {
                     display: flex;
                     flex-direction: column;
-                    gap:10px;
+                    gap: 10px;
                 }
 
-                h2{
+                h2 {
                     color: white;
                 }
 
-                img{
+                img {
                     width: 100%;
                     height: 200px;
                     object-fit: cover;
@@ -316,7 +317,100 @@ body {
             }
         }
 
+        //Write
 
+        .add {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .content {
+            flex: 5;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            input{
+                padding: 10px;
+                border: 1px solid $pink;
+            }
+
+            .editorContainer{
+                height: 300px;
+                overflow: scroll;
+                background-color: white;
+
+                .editor{
+                    height: 300px;
+                }
+            }
+        }
+
+        .menu {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .item{
+                border: 1px solid white;
+                padding: 10px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-size: 12px;
+
+                h1{
+                    font-size: 20px;
+                }
+
+                b{
+                    color: rgb(102, 100, 100);
+                }
+
+                span{
+                    color: rgb(102, 100, 100);
+                }
+
+                label{
+                    color: rgb(102, 100, 100);
+                }
+
+                .file{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+
+                .buttons{
+                    display: flex;
+                    justify-content: space-between;
+
+                    :first-child{
+                        cursor: pointer;
+                        color: $pink;
+                        background-color: white;
+                        border: 1px solid $pink;
+                        padding: 3px 5px;
+                    }
+
+                    :last-child{
+                        cursor: pointer;
+                        color: $pink;
+                        background-color: white;
+                        border: 1px solid $pink;
+                        padding: 3px 5px;
+                    }
+                }
+
+                .cat{
+                    display: flex;
+                    align-items: center;
+                    gap: 2px;
+                }
+            }
+        }
 
 
     }
