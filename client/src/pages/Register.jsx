@@ -9,11 +9,17 @@ const Register = () => {
     password: "",
   });
 
+  const [errorMessage, setErrorMessage] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/auth/register", formData);
-      console.log(res.data);
+      if (!formData.password.length < 6) {
+        setErrorMessage("Password must be longer than 6 characters");
+      } else {
+        const res = await axios.post("/api/auth/register", formData);
+        console.log(res.data);
+      }
     } catch (err) {
       console.error(err);
     }
@@ -52,7 +58,7 @@ const Register = () => {
           placeholder="password"
         />
         <button type="submit">Register</button>
-        <p>This is an error!</p>
+        {errorMessage && <p>{errorMessage}</p>}
         <span>
           Do you have any account? <Link to="/login">Login</Link>
         </span>
