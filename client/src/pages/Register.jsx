@@ -14,20 +14,20 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.get(`/api/auth/email/${formData.email}`);
+      const res = await axios.get(`http://localhost:5005/api/auth/email/${formData.email}`);
       if (res.data.user) {
         setErrorMessage("Email address already exists");
         setTimeout(() => {
           setErrorMessage("");
         }, 5000);
-      }
-      if (formData.password.length < 6) {
+      } else if (formData.password.length < 6) {
         setErrorMessage("Password must be longer than 6 characters");
         setTimeout(() => {
           setErrorMessage("");
         }, 5000);
       } else {
-        const res = await axios.post("/api/auth/register", formData);
+        const res = await axios.post("http://localhost:5005/api/auth/register", formData);
+        setFormData({username: "", email: "", password: ""});
         console.log(res.data);
       }
     } catch (err) {
