@@ -23,10 +23,10 @@ const Write = () => {
         <div className="item">
           <h1>Publish</h1>
           <span>
-            <b>Durum: </b> Taslak
+            <b>Status: </b> Draft
           </span>
           <span>
-            <b>Status: </b> Draft
+            <b>Visibility:</b> Public
           </span>
           <input
             style={{ display: "none" }}
