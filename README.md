@@ -17,7 +17,6 @@ localhost:3000/register
 ![Uygulama Ekran Görüntüsü](https://github.com/elifgazioglu/blog-app-react/blob/main/client/screenshots/Ekran%20Resmi%202023-04-04%2001.40.55.png?raw=true)
 
 localhost:3000/write
-
 ![Uygulama Ekran Görüntüsü](https://github.com/elifgazioglu/blog-app-react/blob/main/client/screenshots/Ekran%20Resmi%202023-04-05%2022.14.48.png?raw=true
 )
 
