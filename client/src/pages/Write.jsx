@@ -21,12 +21,12 @@ const Write = () => {
       </div>
       <div className="menu">
         <div className="item">
-          <h1>Yayınla</h1>
+          <h1>Publish</h1>
           <span>
             <b>Durum: </b> Taslak
           </span>
           <span>
-            <b>Görünürlük: </b> Herkese Açık
+            <b>Status: </b> Draft
           </span>
           <input
             style={{ display: "none" }}
@@ -35,23 +35,23 @@ const Write = () => {
             id="file"
           ></input>
           <label className="file" htmlFor="file">
-            Fotoğraf Yükle
+          Upload Photo
           </label>
           <div className="buttons">
-            <button>Taslak olarak kaydet</button>
-            <button>Güncelle</button>
+            <button>Save as draft</button>
+            <button>Update</button>
           </div>
         </div>
         <div className="item">
-          <h1>Kategori</h1>
+          <h1>Category</h1>
 
           <div className="cat">
             <input type="radio" name="cat" value="art" id="art"></input>
-            <label htmlFor="art">Sanat</label>
+            <label htmlFor="art">Art</label>
           </div>
           <div className="cat">
             <input type="radio" name="cat" value="science" id="science"></input>
-            <label htmlFor="science">Bilim</label>
+            <label htmlFor="science">Science</label>
           </div>
           <div className="cat">
             <input
@@ -60,19 +60,19 @@ const Write = () => {
               value="Technology"
               id="technology"
             ></input>
-            <label htmlFor="Technology">Teknoloji</label>
+            <label htmlFor="Technology">Technology</label>
           </div>
           <div className="cat">
             <input type="radio" name="cat" value="Cinema" id="cinema"></input>
-            <label htmlFor="Cinema">Sinema</label>
+            <label htmlFor="Cinema">Cinema</label>
           </div>
           <div className="cat">
             <input type="radio" name="cat" value="Design" id="design"></input>
-            <label htmlFor="design">Tasarım</label>
+            <label htmlFor="design">Design</label>
           </div>
           <div className="cat">
             <input type="radio" name="cat" value="Food" id="food"></input>
-            <label htmlFor="food">Yemek</label>
+            <label htmlFor="food">Food</label>
           </div>
         </div>
       </div>

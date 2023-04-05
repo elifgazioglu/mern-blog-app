@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Register = () => {
@@ -10,6 +10,8 @@ const Register = () => {
   });
 
   const [errorMessage, setErrorMessage] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +31,7 @@ const Register = () => {
         const res = await axios.post("http://localhost:5005/api/auth/register", formData);
         setFormData({username: "", email: "", password: ""});
         console.log(res.data);
+        navigate('/home');
       }
     } catch (err) {
       console.error(err);
