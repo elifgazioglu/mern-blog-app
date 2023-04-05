@@ -9,8 +9,11 @@
   
 ## Screenshot 📸
 
+More screenshots to come 🏃‍♀️
+
 ![Uygulama Ekran Görüntüsü](https://github.com/elifgazioglu/blog-app-react/blob/main/client/screenshots/Ekran%20Resmi%202023-04-04%2001.40.15.png?raw=true)
 
 ![Uygulama Ekran Görüntüsü](https://github.com/elifgazioglu/blog-app-react/blob/main/client/screenshots/Ekran%20Resmi%202023-04-04%2001.40.55.png?raw=true)
+
 
   
