@@ -331,17 +331,17 @@ body {
             flex-direction: column;
             gap: 20px;
 
-            input{
+            input {
                 padding: 10px;
                 border: 1px solid $pink;
             }
 
-            .editorContainer{
+            .editorContainer {
                 height: 300px;
                 overflow: scroll;
                 background-color: white;
 
-                .editor{
+                .editor {
                     height: 300px;
                 }
             }
@@ -353,7 +353,7 @@ body {
             flex-direction: column;
             gap: 20px;
 
-            .item{
+            .item {
                 border: 1px solid white;
                 border-radius: 10px;
                 padding: 10px;
@@ -363,32 +363,32 @@ body {
                 justify-content: space-between;
                 font-size: 12px;
 
-                h1{
+                h1 {
                     font-size: 20px;
                 }
 
-                b{
+                b {
                     color: rgb(102, 100, 100);
                 }
 
-                span{
+                span {
                     color: rgb(102, 100, 100);
                 }
 
-                label{
+                label {
                     color: rgb(102, 100, 100);
                 }
 
-                .file{
+                .file {
                     text-decoration: underline;
                     cursor: pointer;
                 }
 
-                .buttons{
+                .buttons {
                     display: flex;
                     justify-content: space-between;
 
-                    :first-child{
+                    :first-child {
                         cursor: pointer;
                         color: $pink;
                         background-color: white;
@@ -396,7 +396,7 @@ body {
                         padding: 3px 5px;
                     }
 
-                    :last-child{
+                    :last-child {
                         cursor: pointer;
                         color: $pink;
                         background-color: white;
@@ -405,14 +405,56 @@ body {
                     }
                 }
 
-                .cat{
+                .cat {
                     display: flex;
                     align-items: center;
                     gap: 2px;
                 }
             }
+
         }
 
+        .main {
+            height: calc(80vh - 80px);
+            display: flex;
+            border: 5px solid white;
 
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .items {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 30px;
+
+                h1{
+                    font-size: 70px;
+                    margin-bottom: -10px;
+                    margin-top: -10px;
+                }
+
+                p{
+                    font-size: 20px;
+                }
+
+                button{
+                    width: 150px;
+                    height: 40px;
+                    cursor: pointer;
+                    border: none;
+                    background-color: rgb(215, 109, 109);
+                    border-radius: 4px;
+                    margin-left: 20px;
+
+                    &:hover{
+                        background-color: rgb(216, 127, 127);
+                    }
+                }
+            }
+        }
     }
 }
