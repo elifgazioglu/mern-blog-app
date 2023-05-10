@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Photo from "../images/photo2.JPG";
 
 const NewPage = () => {
@@ -13,7 +14,7 @@ const NewPage = () => {
           Discover stories, thinking, and <br />
           expertise from writers on any topic.
         </p>
-        <button>Start reading</button>
+        <Link className="link" to="/login">Start reading</Link>
       </div>
     </div>
   );
