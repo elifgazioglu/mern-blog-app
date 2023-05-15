@@ -16,7 +16,7 @@ const Login = () => {
 
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { user, dispatch, isFetching } = useContext(Context);
+  const { dispatch, isFetching } = useContext(Context);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,7 +41,6 @@ const Login = () => {
     }
   };
 
-  console.log(user);
   console.log(isFetching);
 
   return (
@@ -62,7 +61,7 @@ const Login = () => {
           ref={passwordRef}
           placeholder="password"
         />
-        <button type="submit">Login</button>
+        <button className="loginButton" type="submit" disabled={isFetching}>Login</button>
         {errorMessage && <p>{errorMessage}</p>}
         <span>
           Dont't you have an account? <Link to="/register">Register</Link>

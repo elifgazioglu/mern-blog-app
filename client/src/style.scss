@@ -55,6 +55,11 @@ body {
                 cursor: pointer;
             }
 
+            .loginButton:disabled{
+                cursor: not-allowed ;
+                background-color: rgb(252, 139, 157);
+            }
+
             span {
                 font-size: 13px;
                 text-align: center;
