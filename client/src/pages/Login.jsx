@@ -44,7 +44,7 @@ const Login = () => {
   console.log(isFetching);
 
   return (
-    <div className="auth">
+    <div className="authLogin">
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <input
