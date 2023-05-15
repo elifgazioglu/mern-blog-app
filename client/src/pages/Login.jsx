@@ -1,39 +1,48 @@
-import { useState, React } from "react";
+import { useState, React, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useContext } from "react";
+import { Context } from "../context/Context";
 
 const Login = () => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
-
   const [errorMessage, setErrorMessage] = useState("");
+
+  const clearInputs = () => {
+    emailRef.current.value = "";
+    passwordRef.current.value = "";
+  };
 
   const navigate = useNavigate();
 
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const { user, dispatch, isFetching } = useContext(Context);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post(
-        "http://localhost:5005/api/auth/login",
-        formData
-      );
-      setFormData({ email: "", password: "" });
+      const res = await axios.post("http://localhost:5005/api/auth/login", {
+        email: emailRef.current.value,
+        password: passwordRef.current.value,
+      });
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+      clearInputs();
       console.log(res.data);
       navigate("/home");
     } catch (err) {
+      dispatch({ type: "LOGIN_FAILURE" });
       console.log(err);
       setErrorMessage("Invalid email or password");
+      clearInputs();
       setTimeout(() => {
         setErrorMessage("");
       }, 5000);
     }
   };
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  console.log(user);
+  console.log(isFetching);
 
   return (
     <div className="auth">
@@ -43,16 +52,14 @@ const Login = () => {
           required
           type="email"
           name="email"
-          value={formData.email}
-          onChange={handleChange}
+          ref={emailRef}
           placeholder="email"
         />
         <input
           required
           type="password"
           name="password"
-          value={formData.password}
-          onChange={handleChange}
+          ref={passwordRef}
           placeholder="password"
         />
         <button type="submit">Login</button>

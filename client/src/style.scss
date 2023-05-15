@@ -415,7 +415,7 @@ body {
         }
 
         .main {
-            height: calc(80vh - 80px);
+            height: calc(70vh - 90px);
             display: flex;
             border: 5px solid white;
 
@@ -441,14 +441,16 @@ body {
                     font-size: 20px;
                 }
 
-                button{
-                    width: 150px;
+                .link{
+                    width: 200px;
                     height: 40px;
                     cursor: pointer;
                     border: none;
                     background-color: rgb(215, 109, 109);
-                    border-radius: 4px;
-                    margin-left: 20px;
+                    border-radius: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
                     &:hover{
                         background-color: rgb(216, 127, 127);
