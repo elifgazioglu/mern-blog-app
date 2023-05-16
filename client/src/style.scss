@@ -99,7 +99,7 @@ body {
                 display: flex;
                 align-items: center;
                 padding: 10px 0px;
-                justify-content: space-between;
+                justify-content: space-around;
 
                 .logo {
                     img {
@@ -145,22 +145,30 @@ body {
 
         //Footer
 
-        footer {
-            margin-top: 100px;
-            padding: 20px;
-            background-color: white;
+        .footerContainer {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
 
-            img {
-                height: 50px;
+            footer {
+                margin-top: 100px;
+                padding: 20px;
+                background-color: white;
+                width: 1000px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                img {
+                    height: 50px;
+                }
             }
         }
 
         //Home
 
         .home {
+
             .posts {
                 margin-top: 50px;
                 display: flex;
@@ -199,10 +207,10 @@ body {
                     }
 
                     .content {
-                        flex: 3;
+                        flex: 2;
                         display: flex;
                         flex-direction: column;
-                        justify-content: space-between;
+                        justify-content: space-between 10px;
 
                         h1 {
                             font-size: 48px;
@@ -342,110 +350,74 @@ body {
 
         //Write
 
-        .add {
-            margin-top: 20px;
-            display: flex;
-            gap: 20px;
-        }
-
-        .content {
-            flex: 5;
+        .write {
+            padding-top: 50px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            align-items: center;
+            justify-content: center;
 
-            input {
-                padding: 10px;
-                border: 1px solid $pink;
-            }
-
-            .editorContainer {
-                height: 300px;
-                overflow: scroll;
-                background-color: white;
-
-                .editor {
-                    height: 300px;
-                }
-            }
-        }
-
-        .menu {
-            flex: 2;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-            .item {
-                border: 1px solid white;
+            .writeImg{
+                width: 80vw;
+                height: 250px;
                 border-radius: 10px;
-                padding: 10px;
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                font-size: 12px;
+                object-fit:cover;
+                margin-bottom: 10px;
+            }
 
-                h1 {
-                    font-size: 20px;
-                }
+            .writeForm {
+                width: auto;
+                height: auto;
+                position: relative;
+                border-radius: 10px;
 
-                b {
-                    color: rgb(102, 100, 100);
-                }
-
-                span {
-                    color: rgb(102, 100, 100);
-                }
-
-                label {
-                    color: rgb(102, 100, 100);
-                }
-
-                .file {
-                    text-decoration: underline;
-                    cursor: pointer;
-                }
-
-                .buttons {
-                    display: flex;
-                    justify-content: space-between;
-
-                    :first-child {
-                        cursor: pointer;
-                        color: $pink;
-                        background-color: white;
-                        border: 1px solid $pink;
-                        padding: 3px 5px;
-                    }
-
-                    :last-child {
-                        cursor: pointer;
-                        color: $pink;
-                        background-color: white;
-                        border: 1px solid $pink;
-                        padding: 3px 5px;
-                    }
-                }
-
-                .cat {
+                .writeFormGroup {
                     display: flex;
                     align-items: center;
-                    gap: 2px;
+                    justify-content: center;
+
+                    .writeIcon{
+                        width: 50px;
+                        height: 50px;
+                        cursor: pointer;
+                    }
+
+                    .writeInput{
+                        font-size: 30px;
+                        border: none;
+                        padding: 20px;
+                        width: 70vw;
+                    }
+
+                    .writeInput:focus{
+                        outline: none;
+                    }
+
+                    .writeText{
+                        font-size: 20px;
+                        height: 20vw;
+                    }
+                }
+
+                .writeSubmit{
+                    position: absolute;
+                    top: 20px;
+                    right: 50px;
                 }
             }
-
         }
 
+        //Main paage
         .main {
             height: calc(70vh - 90px);
             display: flex;
             border: 5px solid white;
 
             img {
-                width: 100%;
+                width: auto;
                 height: 100%;
                 object-fit: cover;
+                opacity: 0.8;
             }
 
             .items {
