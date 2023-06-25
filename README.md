@@ -25,6 +25,9 @@
 
 ![Uygulama Ekran Görüntüsü](https://github.com/elifgazioglu/mern-blog-app/blob/main/client/src/screenshots/Ekran%20Resmi%202023-06-24%2021.43.49.png?raw=true)
 
+![Uygulama Ekran Görüntüsü](https://github.com/elifgazioglu/mern-blog-app/blob/main/client/src/screenshots/Ekran%20Resmi%202023-06-25%2020.08.40.png?raw=true)
+
+
 
 
 
