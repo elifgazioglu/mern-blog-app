@@ -5,6 +5,8 @@ import { Link, useLocation } from "react-router-dom";
 const Home = () => {
   const [posts, setPosts] = useState([]);
 
+  console.log(posts);
+
   const username = useLocation().search
 
   useEffect(() => {
@@ -27,7 +29,7 @@ const Home = () => {
               <img src={`http://localhost:5005/images/${post?.photo}`} alt=""></img>
             </div>
             <div className="content">
-              <Link className="link" to={`/post/${post.id}`}>
+              <Link className="link" to={`/post/${post._id}`}>
                 <h1>{post.title}</h1>
               </Link>
               <p>{post.desc.substring(0, 300)}...</p>
