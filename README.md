@@ -17,8 +17,6 @@
 
 ![Uygulama Ekran Görüntüsü](https://github.com/elifgazioglu/mern-blog-app/blob/main/client/src/screenshots/Ekran%20Resmi%202023-06-24%2021.43.32.png?raw=true)
 
-![Uygulama Ekran Görüntüsü](https://github.com/elifgazioglu/mern-blog-app/blob/main/client/src/screenshots/Ekran%20Resmi%202023-06-24%2021.44.03.png?raw=true)
-
 ![Uygulama Ekran Görüntüsü](https://github.com/elifgazioglu/mern-blog-app/blob/main/client/src/screenshots/Ekran%20Resmi%202023-06-24%2021.44.31.png?raw=true)
 
 ![Uygulama Ekran Görüntüsü](https://github.com/elifgazioglu/mern-blog-app/blob/main/client/src/screenshots/Ekran%20Resmi%202023-06-24%2021.44.15.png?raw=true)
